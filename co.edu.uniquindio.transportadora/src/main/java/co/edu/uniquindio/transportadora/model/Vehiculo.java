@@ -1,6 +1,6 @@
 package co.edu.uniquindio.transportadora.model;
 
-public class Vehiculo {
+public abstract class Vehiculo { //Es abstracta porque tienen informacion que es generica que sirve para heredar a otras clases.
     private String placa;
     private String modelo;
     private String marca;
@@ -46,5 +46,15 @@ public class Vehiculo {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "placa='" + placa + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }

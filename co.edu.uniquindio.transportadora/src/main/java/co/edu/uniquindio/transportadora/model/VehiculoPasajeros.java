@@ -1,12 +1,15 @@
 package co.edu.uniquindio.transportadora.model;
 
-public class VehiculoPasajeros {
+import co.edu.uniquindio.transportadora.services.IVehiculoCarga;
+
+public class VehiculoPasajeros extends Vehiculo implements IVehiculoCarga {
 private int numMaxPasajeros;
 
     public VehiculoPasajeros(){}
 
     public VehiculoPasajeros(int numMaxPasajeros){
-        this.numMaxPasajeros = numMaxPasajeros
+
+        this.numMaxPasajeros = numMaxPasajeros;
     }
 
     public int getnumMaxPasajeros(){
@@ -16,5 +19,10 @@ private int numMaxPasajeros;
         this.numMaxPasajeros = numMaxPasajeros;
     }
 
+
+    @Override
+    public void encenderElectricamente() {
+
+    }
 }
 
